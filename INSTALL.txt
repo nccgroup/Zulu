@@ -1,0 +1,15 @@
+Windows
+-------
+Tested on Windows 7
+
+Requirements: 
+
+Python 2.x
+wx
+pyserial
+ctypes
+SendKeys
+dpkt
+winappdbg
+smtplib
+
