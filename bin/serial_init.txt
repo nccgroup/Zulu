@@ -1,0 +1,15 @@
+[serial]
+port = COM5
+baudrate = 9600
+bytesize = 8
+stopbits = 1
+parity = N
+rtscts = 0
+xonxoff = 0
+[settings]
+echo = 0
+newline = 0
+unprintable = 0
+forecolor = (0, 0, 0)
+backcolor = (255, 255, 255)
+font = Courier 10 Pitch-12

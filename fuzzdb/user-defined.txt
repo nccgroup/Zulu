@@ -1,0 +1,10 @@
+## Zulu Fuzz testcase file
+##
+## User defined
+##
+## Insert testcases below (one per line)
+##
+Administrator
+test
+test1
+test2
