@@ -1483,8 +1483,11 @@ class MainPanel(wx.Panel):
 		data = fp.read()
 		try:
 			temp = []
-			temp = path.split('.')
-			self.file_extension = temp[len(temp)-1]
+			temp = os.path.basename(path).split('.')
+			if len(temp) < 1:
+				self.file_extension = temp[len(temp)-1]
+			else:
+				self.file_extension = ''
 		except:
 			pass
 		tmp_list = []
