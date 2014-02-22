@@ -1643,7 +1643,7 @@ class MainPanel(wx.Panel):
 			try:
 				event = debug.wait(1000)
 			except WindowsError, e:
-				if win32.winerror(e) in (win32.ERROR_SEM_TIMEOUT, win32.WAIT_TIMEOUT):
+				if ctypes.winerror(e) in (ctypes.ERROR_SEM_TIMEOUT, ctypes.WAIT_TIMEOUT):
 					continue
 				raise
 			try:
