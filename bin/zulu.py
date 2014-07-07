@@ -1483,8 +1483,11 @@ class MainPanel(wx.Panel):
 		data = fp.read()
 		try:
 			temp = []
-			temp = path.split('.')
-			self.file_extension = temp[len(temp)-1]
+			temp = os.path.basename(path).split('.')
+			if len(temp) < 1:
+				self.file_extension = temp[len(temp)-1]
+			else:
+				self.file_extension = ''
 		except:
 			pass
 		tmp_list = []
@@ -1643,7 +1646,7 @@ class MainPanel(wx.Panel):
 			try:
 				event = debug.wait(1000)
 			except WindowsError, e:
-				if win32.winerror(e) in (win32.ERROR_SEM_TIMEOUT, win32.WAIT_TIMEOUT):
+				if ctypes.winerror(e) in (ctypes.ERROR_SEM_TIMEOUT, ctypes.WAIT_TIMEOUT):
 					continue
 				raise
 			try:
